@@ -1,0 +1,18 @@
+version: '3.5'
+services:
+  php:
+    image: nnphat6492/laravel-kubernetes:latest
+    restart: always
+    ports:
+      - 8000:80
+    volumes:
+      - ./:/var/www/html
+    environment:
+      - APP_KEY="base64:HcqG2d5UXtnOkP+nOxz/cZhnwff2XX5bC+pEjX2ZIbY="
+      - APP_ENV=local
+      - APP_DEBUG=true
+      - DB_PORT=31333
+      - DB_HOST=139.59.242.248
+      - DB_DATABASE=laravel
+      - DB_USERNAME=nnphat6492
+      - DB_PASSWORD=Ngu9enph@t
